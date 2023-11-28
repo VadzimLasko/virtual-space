@@ -1,0 +1,35 @@
+.header
+    background-color: #FFD9C3
+    width: 117rem
+    grid-column: 1 / span 1
+    grid-row: 1 / span 1
+    justify-self: center
+    display: grid
+    grid-template-rows: 20vh 70vh 10vh
+    grid-template-columns: minmax(13.5rem, 1fr) repeat(2, min-content) minmax(13.5rem, 1fr)
+    &__top
+        grid-column: 2 / span 2
+        grid-row: 1 / span 1
+        display: flex
+        justify-content: space-around
+    // &__logo
+    // &__nav
+    &__main
+        grid-column: 2 / span 2
+        grid-row: 2 / span 1
+    // &__left-wrapper
+    // &__right-wrapper
+    &__bottom
+        grid-column: 2 / span 2
+        grid-row: 3 / span 1
+
+.logo
+    width: 28.6rem
+    height: 7.8rem
+    flex-shrink: 0
+
+
+
+
+
+

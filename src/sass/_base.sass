@@ -1,10 +1,11 @@
-$color-green-dark: #425844
-$color-green-light: #61A568
+// $color-green-dark: #425844
+// $color-green-light: #61A568
 
-$color-blue-dark: #101D2C
+// $color-blue-dark: #101D2C
 
-$color-gray-dark: #AAAAAA
-$color-gray-light: #F5F5F5
+// $color-gray-dark: #AAAAAA
+$color-background: #FFD9C3
+$color-main-text: #826F8C
     
 @mixin respond($breakpoint)
     @if $breakpoint == phone 
@@ -30,26 +31,18 @@ $color-gray-light: #F5F5F5
 
 html
     font-size: 62.5%
-    @include respond(tab-land)
-        font-size: 50%
-    @include respond(phone)
-        font-size: 40%
 
 body
-    font-family: "Montserrat", sans-serif
-    font-weight: 400
-    color: $color-gray-light
-    font-size: 1.6rem
-    background-color: $color-gray-light
-
-.container
+    font-family: 'Josefin Sans', sans-serif
+    font-weight: 500
+    font-size: 1.8rem
+    font-display: swap
+    font-style: normal
+    width: 144rem
+    overflow: hidden
     display: grid
-    grid-template-rows: 80vh min-content 40vw repeat(3, min-content) 
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end]
-    @include respond(tab-land)
-        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content) 
-        grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end]
-    @include respond(tab-port)
-        grid-template-rows: 6rem calc(100vh - 6rem )  min-content min-content  min-content 50vw  repeat(3, min-content) 
+    grid-template-rows: 100vh repeat(4, min-content)  
+    grid-template-columns: minmax(min-content, 1fr)
+    grid-auto-rows: min-content
 
-    
+
