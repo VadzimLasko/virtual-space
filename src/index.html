@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Virtual space</title>
   </head>
+
   <body>
+    <!--  First section -->
     <header class="header header__backgroung-img">
       <div class="header__top">
         <img
-          src="img/Final logo 1 1.png"
+          src="img/logo/Final logo 1 1.png"
           alt="logo"
           class="header__logo logo"
         />
@@ -32,13 +34,16 @@
       </div>
       <div class="header__main">
         <div class="header__left-wrapper">
-          <div class="first-line">
+          <div class="left-wrapper__first-line">
             <h1 class="header__title-1 title-1">Gaming Consoles</h1>
 
             <i class="icon-Frame"></i>
+            <i class="icon-Frame"></i>
           </div>
 
-          <h2 class="header__title-2 title-2">Try It, Rent It, Save $50!</h2>
+          <h2 class="header__title-2 title-2">
+            Try It, Rent It, <span class="title-2-grey">Save $50!</span>
+          </h2>
           <p class="header__text ordinary-text">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
@@ -47,9 +52,23 @@
           </p>
           <button class="header__left-wrapper btn">Get Started Now</button>
         </div>
-        <div class="header__right-wrapper"></div>
+        <div class="header__right-wrapper">
+          <img
+            class="right-wrapper__gamer-img"
+            src="./icons/char.svg"
+            alt="gamer"
+          />
+        </div>
       </div>
       <div class="header__bottom"></div>
+      <img src="./icons/DOTS.svg" alt="dots" class="header__dots dots" />
+
+      <img
+        src="./icons/cross_grad.svg"
+        alt="cross"
+        class="header-cross cross-grad"
+      />
+      <img src="./icons/cross_stroke.svg" alt="cross" class="stroke" />
     </header>
   </body>
 </html>
