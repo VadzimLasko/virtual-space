@@ -1,7 +1,7 @@
 .header
     background: url('../icons/image 3.svg'), lightgray 50% / cover no-repeat
-    height: 84.4rem
-    overflow: hidden
+    max-height: 84.4rem
+    // overflow: hidden
     position: relative
     &__backgroung-img
         background-color: rgba(255, 217, 195, 0.7)
@@ -27,17 +27,17 @@
     &__text
         margin-bottom: 3.6rem
     &__cross-stroke
-        position: relative
-        top: -52rem
-        left: -19%
+        position: absolute
+        top: 30rem
+        left: -1.5vw
     &__cross-grad
-        position: relative
-        top: -15rem
-        left: 30rem
+        position: absolute
+        top: 65rem
+        left: 47rem
     &__dots
-        position: relative
-        top: -45rem
-        right: -130rem
+        position: absolute
+        top: 38rem
+        left: 137rem
 
 .logo
     width: 28.6rem
@@ -79,7 +79,6 @@
         transform: translateY(-6rem)
 
 .cross
-    position: relative
     width: 11.7rem
     height: 11.7rem
     object-fit: contain

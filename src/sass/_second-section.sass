@@ -1,5 +1,39 @@
 .section-second
-    min-height: 69rem
-    padding-top: 3rem
+    max-height: 69rem
+    padding-top: 5rem
     margin: 0 auto
+    background-image: url('../icons/image 14.svg')
+    background-repeat: no-repeat
+    background-size: cover
     background-color: #FCDED7
+    &__main
+        width: 117rem
+        margin: 0 auto
+        display: grid
+        grid-template-rows: min-content
+        grid-auto-rows: min-content
+        grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr))
+        column-gap: 7rem
+        justify-items: center
+        align-items: center
+    &__left-wrapper
+        max-width: 55rem
+        i
+            display: inline-block
+            transform: rotate(-180deg)
+            position: relative
+            top: -3rem
+            left: 25rem
+        &__title-1
+            margin-bottom: 3rem
+        &__title-2
+            margin-bottom: 2.5rem
+        &__text
+            margin-bottom: 2.9rem
+    &__right-wrapper
+        img
+            width: 55.7rem
+            object-fit: contain
+            margin-bottom: 5rem
+ 
+
