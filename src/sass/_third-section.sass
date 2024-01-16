@@ -10,7 +10,9 @@
         margin-bottom: 10rem
         text-align: center
     &__plans
+        width: 117rem
         display: grid
+        margin: 0 auto
         grid-template-rows: min-content
         grid-auto-rows: min-content
         grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr))
@@ -18,4 +20,28 @@
         justify-items: center
         align-items: center
         &__item
+            background-color: #FBDACF
+            border-radius: 2rem
+            box-shadow: 0px 20px 50px 0px rgba(132, 148, 205, 0.08)
             width: 36rem
+            padding-left: 4.9rem
+            padding-top: 3.6rem
+    &__btn
+        margin-bottom: 4.7rem
+
+
+.item
+    &__name
+        margin-bottom: 3.4rem
+    &__price
+        color: #EB8382
+        margin-bottom: 2.6rem
+    &__description
+        margin-bottom: 4rem
+        &__text:not(:last-child)
+            margin-bottom: 2.5rem
+        &__text i
+            color: #486482
+            font-size: 1.3rem
+            margin-right: 1.3rem
+
