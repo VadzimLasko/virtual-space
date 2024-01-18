@@ -1,6 +1,6 @@
 .section-third
     height: 90rem
-    // max-height: 90rem
+    max-height: 90rem
     padding-top: 5rem
     background-color: #ffe6d7
     &__title-1
@@ -10,27 +10,51 @@
         margin-bottom: 10rem
         text-align: center
     &__plans
-        width: 117rem
-        display: grid
-        margin: 0 auto
-        grid-template-rows: min-content
-        grid-auto-rows: min-content
+        @include main-block-center
+        @include grid-template
         grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr))
         column-gap: 4rem
-        justify-items: center
         align-items: center
         &__item
             background-color: #FBDACF
+            position: relative
             border-radius: 2rem
             box-shadow: 0px 20px 50px 0px rgba(132, 148, 205, 0.08)
             width: 36rem
+            height: 56.6rem
             padding-left: 4.9rem
             padding-top: 3.6rem
-    &__btn
-        margin-bottom: 4.7rem
-
+        &__item:hover
+            .item__circle-mark
+                visibility: visible
+        &__item:hover
+            height: 60.6rem
+            background: url('../icons/Union.svg') no-repeat -32% 110% / 26rem 26.6rem, linear-gradient(180deg, #446381 0%, #826F8C 100%)
+            padding-top: 5.4rem
+            h3, i, p
+                color: white
+            &__btn
+                margin-bottom: 4.7rem
 
 .item
+    &__circle-mark
+        visibility: hidden
+        position: absolute
+        top: 4%
+        right: 7%
+        width: 4.5rem
+        height:  4.5rem
+        border-radius: 50%
+        border-color: #FAC7B5
+        border-style: solid
+        background-color: #EB8382
+        border-width: .6rem 
+        border-radius: 50%
+        @include center-par
+        i
+            color: white
+            font-size: 1.2rem
+            font-weight: 700
     &__name
         margin-bottom: 3.4rem
     &__price
@@ -45,3 +69,13 @@
             font-size: 1.3rem
             margin-right: 1.3rem
 
+
+// .item__circle-mark
+//     visibility: visible
+
+// .selected
+//     height: 60.6rem
+//     background: url('../icons/Union.svg') no-repeat -32% 110% / 26rem 26.6rem, linear-gradient(180deg, #446381 0%, #826F8C 100%)
+//     padding-top: 5.4rem
+//     h3, i, p
+//         color: white

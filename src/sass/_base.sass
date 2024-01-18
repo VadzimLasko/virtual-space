@@ -7,23 +7,6 @@
 $color-background: #FFD9C3
 $color-main-text: #826F8C
     
-@mixin respond($breakpoint)
-    @if $breakpoint == phone 
-        @media only screen and (max-width: 420px)
-            @content
-
-    @if $breakpoint == tab-port
-        @media only screen and (max-width: 830px)
-            @content
-    
-    @if $breakpoint == tab-land
-        @media only screen and (max-width: 1170px)
-            @content
-
-    @if $breakpoint == big-screen
-        @media only screen and (min-width: 1800px)
-            @content
-    
 *, ::after, ::before
     margin: 0
     padding: 0
@@ -31,6 +14,14 @@ $color-main-text: #826F8C
 
 html
     font-size: 62.5%
+    @include respond(tab-land)
+        font-size: 50%
+    @include respond(tab-port)
+        font-size: 42%
+    @include respond(phone)
+        font-size: 30%
+    @include respond(big-screen)
+        font-size: 75%
 
 body
     font-family: 'Josefin Sans', sans-serif
@@ -39,6 +30,5 @@ body
     font-display: swap
     font-style: normal
     position: relative
-    max-width: 160rem
-    margin: 0 auto
+    width: auto
 

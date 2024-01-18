@@ -1,17 +1,14 @@
 .section-second
-    height: 69rem
-    padding-top: 5rem
+    max-height: 69rem
+    padding: 5rem 0
     margin: 0 auto
     background-image: url('../icons/image 14.svg')
     background-repeat: no-repeat
     background-size: cover
     background-color: #FCDED7
     &__main
-        width: 117rem
-        margin: 0 auto
-        display: grid
-        grid-template-rows: min-content
-        grid-auto-rows: min-content
+        @include main-block-center
+        @include grid-template
         grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr))
         column-gap: 7rem
         justify-items: center

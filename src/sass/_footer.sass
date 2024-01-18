@@ -4,19 +4,13 @@
     padding-bottom: 5rem
     background-color: #FFE6D7
     &__main
-        width: 117rem
-        margin: 0 auto 
-
-        display: flex
+        @include main-block-center 
+        @include center-par
         justify-content: space-between
-        align-items: center
-
     &__text
         font-size: 1.6rem
     &__social-media
-        display: flex
-        justify-content: center
-        // height: 4rem
+        @include center-par
 
 .social-media
     &__item
@@ -24,12 +18,8 @@
         width: 4rem
         background-color: rgba(252, 216, 203, 1)
         border-radius: 50%
-        display: flex
-        justify-content: center
-        align-items: center
+        @include center-par
     &__item:not(:last-child)
         margin-right: 1.5rem
         i
             font-size: 2.5rem
-            
-    
