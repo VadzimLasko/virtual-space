@@ -1,5 +1,5 @@
 .section-second
-    max-height: 69rem
+    min-height: 65rem
     padding: 5rem 0
     margin: 0 auto
     background-image: url('../icons/image 14.svg')
@@ -8,13 +8,16 @@
     background-color: #FCDED7
     &__main
         @include main-block-center
-        @include grid-template
-        grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr))
-        column-gap: 7rem
-        justify-items: center
-        align-items: center
+        @include center-par
+        flex-wrap: wrap
     &__left-wrapper
         max-width: 55rem
+        margin-right: 3rem
+        @include respond(tab-port-s)
+            max-width: 88rem
+        @include respond(phone)
+            padding-left: 1.5rem
+            margin-right: 1.5rem
         i
             display: inline-block
             transform: rotate(-180deg)
@@ -29,8 +32,10 @@
             margin-bottom: 2.9rem
     &__right-wrapper
         img
-            width: 55.7rem
+            max-width: 55.7rem
             object-fit: contain
             margin-bottom: 5rem
+            @include respond(tab-port-s)
+                margin-bottom: 1.5rem
  
 

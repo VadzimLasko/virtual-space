@@ -1,20 +1,23 @@
 .section-third
-    height: 90rem
-    max-height: 90rem
+    min-height: 90rem
     padding-top: 5rem
     background-color: #ffe6d7
+    @include respond(tab-port-s)
+        padding-top: 7rem
     &__title-1
         margin-bottom: 2.3rem
         text-align: center
     &__title-2
         margin-bottom: 10rem
         text-align: center
+        @include respond(tab-port-s)
+            margin-bottom: 6rem
     &__plans
         @include main-block-center
-        @include grid-template
-        grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr))
-        column-gap: 4rem
-        align-items: center
+        @include center-par
+        flex-wrap: wrap
+        @include respond(tab-port-s)
+            padding-left: 3rem
         &__item
             background-color: #FBDACF
             position: relative
@@ -24,13 +27,17 @@
             height: 56.6rem
             padding-left: 4.9rem
             padding-top: 3.6rem
+            margin-bottom: 4rem
+            margin-right: 3rem
         &__item:hover
             .item__circle-mark
                 visibility: visible
         &__item:hover
             height: 60.6rem
+            margin-bottom: 0
             background: url('../icons/Union.svg') no-repeat -32% 110% / 26rem 26.6rem, linear-gradient(180deg, #446381 0%, #826F8C 100%)
             padding-top: 5.4rem
+            transform: translateY(-1.8rem)
             h3, i, p
                 color: white
             &__btn
@@ -69,13 +76,3 @@
             font-size: 1.3rem
             margin-right: 1.3rem
 
-
-// .item__circle-mark
-//     visibility: visible
-
-// .selected
-//     height: 60.6rem
-//     background: url('../icons/Union.svg') no-repeat -32% 110% / 26rem 26.6rem, linear-gradient(180deg, #446381 0%, #826F8C 100%)
-//     padding-top: 5.4rem
-//     h3, i, p
-//         color: white

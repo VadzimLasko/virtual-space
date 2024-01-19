@@ -1,9 +1,4 @@
-// $color-green-dark: #425844
-// $color-green-light: #61A568
 
-// $color-blue-dark: #101D2C
-
-// $color-gray-dark: #AAAAAA
 $color-background: #FFD9C3
 $color-main-text: #826F8C
     
@@ -15,13 +10,19 @@ $color-main-text: #826F8C
 html
     font-size: 62.5%
     @include respond(tab-land)
+        font-size: 55%
+    @include respond(tab-port-b)
         font-size: 50%
-    @include respond(tab-port)
-        font-size: 42%
+    @include respond(tab-port-m)
+        font-size: 45%
+    @include respond(tab-port-l)
+        font-size: 40%
+    @include respond(tab-port-s)
+        font-size: 40%
     @include respond(phone)
-        font-size: 30%
+        font-size: 32%
     @include respond(big-screen)
-        font-size: 75%
+        font-size: 80%
 
 body
     font-family: 'Josefin Sans', sans-serif

@@ -4,21 +4,28 @@
     align-items: center
 
 @mixin main-block-center
-    width: 117rem
+    max-width: 117rem
     margin: 0 auto 
-
-@mixin grid-template
-    display: grid
-    grid-template-rows: min-content
-    grid-auto-rows: min-content
 
 @mixin respond($breakpoint)
     @if $breakpoint == phone 
-        @media only screen and (max-width: 420px)
+        @media only screen and (max-width: 662px)
             @content
 
-    @if $breakpoint == tab-port
-        @media only screen and (max-width: 830px)
+    @if $breakpoint == tab-port-s
+        @media only screen and (max-width: 770px)
+            @content
+
+    @if $breakpoint == tab-port-l
+        @media only screen and (max-width: 860px)
+            @content
+
+    @if $breakpoint == tab-port-m
+        @media only screen and (max-width: 980px)
+            @content
+
+    @if $breakpoint == tab-port-b
+        @media only screen and (max-width: 1080px)
             @content
     
     @if $breakpoint == tab-land

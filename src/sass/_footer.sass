@@ -1,5 +1,5 @@
 .footer
-    max-height: 31.7rem
+    height: 13rem
     padding-top: 2rem
     padding-bottom: 5rem
     background-color: #FFE6D7
@@ -7,6 +7,11 @@
         @include main-block-center 
         @include center-par
         justify-content: space-between
+        @include respond(tab-port-s)
+            justify-content: space-around
+        @include respond(phone)
+            padding-left: 1.5rem
+            margin-right: 1.5rem
     &__text
         font-size: 1.6rem
     &__social-media
