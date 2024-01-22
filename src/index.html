@@ -153,7 +153,13 @@
       <h2 class="section-third__title-2 title-2">Choose Your Plan</h2>
       <div class="section-third__plans">
         <!--  Plan one -->
-        <div class="section-third__plans__item">
+        <input
+          type="radio"
+          name="plans"
+          class="section-third__plans__toggle"
+          id="plan-1__toggle"
+        />
+        <label for="plan-1__toggle" class="section-third__plans__item">
           <div class="item__circle-mark">
             <i class="icon-mark"></i>
           </div>
@@ -162,7 +168,6 @@
             <span class="title-2-dollar">$</span>50.00
             <span class="title-2-small"> / Per Hour</span>
           </h2>
-
           <div class="item__description">
             <p class="item__description__text text-ordinary">
               <i class="icon-mark"></i>10 users included
@@ -183,9 +188,17 @@
           <button class="section-third__btn btn btn-wide">
             Select This Plan
           </button>
-        </div>
-        <!--  Plan two -->
-        <div class="section-third__plans__item">
+        </label>
+
+        <!-- Plan two -->
+        <input
+          type="radio"
+          name="plans"
+          class="section-third__plans__toggle"
+          id="plan-2__toggle"
+          checked
+        />
+        <label for="plan-2__toggle" class="section-third__plans__item">
           <div class="item__circle-mark">
             <i class="icon-mark"></i>
           </div>
@@ -215,10 +228,16 @@
           <button class="section-third__btn btn btn-wide">
             Select This Plan
           </button>
-        </div>
+        </label>
 
-        <!--  Plan three -->
-        <div class="section-third__plans__item">
+        <!-- Plan three -->
+        <input
+          type="radio"
+          name="plans"
+          class="section-third__plans__toggle"
+          id="plan-3__toggle"
+        />
+        <label for="plan-3__toggle" class="section-third__plans__item">
           <div class="item__circle-mark">
             <i class="icon-mark"></i>
           </div>
@@ -248,7 +267,7 @@
           <button class="section-third__items__btn btn btn-wide">
             Select This Plan
           </button>
-        </div>
+        </label>
       </div>
     </section>
 

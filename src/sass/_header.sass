@@ -49,8 +49,10 @@
                 margin-right: 3rem
         &__cross-grad
             position: absolute
-            top: 65%
+            top: 80%
             left: 45%
+            @include respond(tab-port-s)
+                top: 65%
     &__right-wrapper
         position: relative
         &__gamer-img
