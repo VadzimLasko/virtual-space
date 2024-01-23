@@ -6,6 +6,8 @@
     min-height: 84.4rem
     position: relative
     overflow: hidden
+    &__nav__list
+        @include center-par
     &__top
         @include main-block-center
         @include center-par
@@ -14,12 +16,16 @@
         margin-bottom: 14rem
         @include respond(tab-port-s)
            justify-content: space-around 
-           margin-bottom: 7rem
-        ////////////////////////////
+           margin-bottom: 10rem
         @include respond(phone)
-            padding-left: 1.5rem
-            margin-right: 1.5rem
-
+            justify-content: space-between
+            max-width: 88rem
+            padding: 5rem 1.5rem 0 1.5rem
+            .header__nav 
+                display: none
+            .header__nav__burger
+                display: block 
+                position: relative
     &__main
         @include main-block-center
         @include center-par

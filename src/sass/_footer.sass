@@ -1,5 +1,5 @@
 .footer
-    height: 13rem
+    min-height: 13rem
     padding-top: 2rem
     padding-bottom: 5rem
     background-color: #FFE6D7
@@ -10,11 +10,28 @@
         @include respond(tab-port-s)
             justify-content: space-around
         @include respond(phone)
+            flex-wrap: wrap
+            justify-content: space-between
             padding-left: 1.5rem
-            margin-right: 1.5rem
+            padding-right: 1.5rem
+            max-width: 88rem
+            .footer__logo
+                margin-bottom: 5rem
+                margin-right: 15rem
+            .footer__social-media
+                order: 2
+                margin-bottom: 5rem
+            .footer__text
+                order: 3
+                text-align: center
+                width: 100%
+    &__logo
+        order: 1
     &__text
+        order: 2
         font-size: 1.6rem
     &__social-media
+        order: 3
         @include center-par
 
 .social-media

@@ -25,12 +25,38 @@
           class="header__logo logo"
         />
         <nav class="header__nav">
-          <a href="#" class="nav__link">Home</a>
-          <a href="#" class="nav__link">About Us</a>
-          <a href="#" class="nav__link">Prices</a>
-          <a href="#" class="nav__link">Rules</a>
-          <button class="nav__btn btn">Get Started Now</button>
+          <ul class="header__nav__list">
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">About Us</a></li>
+            <li><a href="#" class="nav__link">Prices</a></li>
+            <li><a href="#" class="nav__link">Rules</a></li>
+            <li><button class="nav__btn btn">Get Started Now</button></li>
+          </ul>
         </nav>
+
+        <div class="header__nav__burger" hidden>
+          <input type="checkbox" id="navin-toggle" class="navigation__toggle" />
+          <label for="navin-toggle" class="navigation__button">
+            <span class="navigation__icon"></span>
+          </label>
+          <div class="navigation__background"></div>
+          <nav class="navigation__nav">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#" class="nav__link">Home</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">About Us</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Prices</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Rules</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="header__main">
         <div class="header__left-wrapper">
@@ -158,6 +184,7 @@
           name="plans"
           class="section-third__plans__toggle"
           id="plan-1__toggle"
+          checked
         />
         <label for="plan-1__toggle" class="section-third__plans__item">
           <div class="item__circle-mark">
@@ -196,7 +223,6 @@
           name="plans"
           class="section-third__plans__toggle"
           id="plan-2__toggle"
-          checked
         />
         <label for="plan-2__toggle" class="section-third__plans__item">
           <div class="item__circle-mark">
