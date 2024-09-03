@@ -41,6 +41,11 @@
         background-color: rgba(252, 216, 203, 1)
         border-radius: 50%
         @include center-par
+        transition: all .4s
+        &:hover
+            transform: scale(140%)
+            fill: blue
+            outline: 1px solid 
     &__item:not(:last-child)
         margin-right: 1.5rem
         i
