@@ -27,6 +27,22 @@
                 width: 100%
     &__logo
         order: 1
+    &__logo
+        position: relative
+        transform-style: preserve-3d
+        &__in, &__out
+            position: absolute
+            backface-visibility: hidden
+            transition: transform .5s
+        &__in
+            transform: rotateX(0deg) 
+        &__out
+            transform: rotateX(180deg) 
+        &:hover &__in
+            transform: rotateX(-180deg) 
+        &:hover &__out
+            transform: rotateX(0deg) 
+    
     &__text
         order: 2
         font-size: 1.6rem

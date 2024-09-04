@@ -26,6 +26,23 @@
             .header__nav__burger
                 display: block 
                 position: relative
+    &__logo
+        position: relative
+        transform-style: preserve-3d
+        &__in, &__out
+            position: absolute
+            width: 100%
+            height: 100%
+            backface-visibility: hidden
+            transition: transform .5s
+        &__in
+            transform: rotateX(0deg) 
+        &__out
+            transform: rotateX(180deg) 
+        &:hover &__in
+            transform: rotateX(-180deg) 
+        &:hover &__out
+            transform: rotateX(0deg) 
     &__main
         @include main-block-center
         @include center-par
@@ -40,6 +57,7 @@
         position: relative
         max-width: 56rem
         margin-right: 3rem
+        animation:  tracking-from-left 1.5s ease 1s backwards
         @include respond(tab-port-s)
             max-width: 88rem
             margin-bottom: 7rem
@@ -61,10 +79,16 @@
                 top: 65%
     &__right-wrapper
         position: relative
+        animation:  tracking-from-right 1.5s ease 1s backwards
         &__gamer-img
             max-width: 56.7rem
             object-fit: contain
-            transform: translateY(-6rem)
+            position: relative
+            bottom: 6rem
+            &:hover
+                z-index: 1
+                animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation 
+
         &__dots
             position: absolute
             top: 19%
@@ -74,16 +98,11 @@
         top: 30rem
         left: -1.9rem
 
-// .span-t
-//     color: transparent !important 
-// 	background-clip: text !important
-// 	background-image: linear-gradient(135deg, #3E9FDB, #00E1FF) !important 
-// 	text-shadow: 3px -4px 5px #00E1FF
 .logo 
     width: 28.6rem
     height: 7.8rem
     flex-shrink: 0
-    object-fit: containj
+    object-fit: contain
     &-little
         width: 23.8rem
         object-fit: contain
@@ -97,7 +116,7 @@
             outline: none
             text-decoration: none
             text-decoration-color: #446381 
-            transition: all .4s
+            transition: all .1s
         &:hover, &:active 
             color: #EB8382
 
@@ -109,23 +128,24 @@
     position: relative
     background: linear-gradient(95deg, #4499D9 17.46%, #7367BE 87.77%)
     color: white
-    z-index: 5
     border: none
     transition: all .1s
     &:hover
         transform: translateY(-.4rem)
-        &:::before
-            content: ''
-            background-color: white
-            position: relative
-            z-index: 1
-            left: 0 
-            width: 18rem
-            height: 5rem
-            border-radius: 3rem
-
-
-
+        &::after
+            transform: scaleX(1.5) scaleY(1.7)
+            opacity: 0
+    &::after
+        content: ''
+        background: linear-gradient(95deg, #4499D9 17.46%, #7367BE 87.77%)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        width: 100%
+        height: 100%
+        border-radius: 3rem 
+        transition: all .3s   
     &:active
         transform: translateY(-.2rem)
     &-wide
@@ -139,4 +159,3 @@
 .dots
     width: 12.3rem
     object-fit: contain
-
