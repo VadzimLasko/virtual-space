@@ -1,0 +1,44 @@
+.section-second
+    min-height: 65rem
+    padding: 5rem 0
+    margin: 0 auto
+    background-image: url('../icons/image 14.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: #FCDED7
+    &__main
+        @include main-block-center
+        @include center-par
+        flex-wrap: wrap
+    &__left-wrapper
+        max-width: 55rem
+        margin-right: 3rem
+        @include respond(tab-port-s)
+            max-width: 88rem
+        @include respond(phone)
+            padding-left: 1.5rem
+            margin-right: 1.5rem
+        i
+            display: inline-block
+            transform: rotate(-180deg)
+            position: relative
+            top: -3rem
+            left: 25rem
+        &__title-1
+            margin-bottom: 3rem
+        &__title-2
+            margin-bottom: 2.5rem
+        &__text
+            margin-bottom: 2.9rem
+    &__right-wrapper
+        img
+            max-width: 55.7rem
+            object-fit: contain
+            margin-bottom: 5rem
+            &:hover
+                z-index: 1
+                animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation 
+            @include respond(tab-port-s)
+                margin-bottom: 1.5rem
+ 
+

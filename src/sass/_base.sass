@@ -1,0 +1,35 @@
+
+$color-background: #FFD9C3
+$color-main-text: #826F8C
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    @include respond(tab-land)
+        font-size: 55%
+    @include respond(tab-port-b)
+        font-size: 50%
+    @include respond(tab-port-m)
+        font-size: 45%
+    @include respond(tab-port-l)
+        font-size: 40%
+    @include respond(tab-port-s)
+        font-size: 40%
+    @include respond(phone)
+        font-size: 32%
+    @include respond(big-screen)
+        font-size: 80%
+
+body
+    font-family: 'Josefin Sans', sans-serif
+    font-weight: 500
+    font-size: 1.8rem
+    font-display: swap
+    font-style: normal
+    position: relative
+    width: auto
+
