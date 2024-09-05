@@ -28,11 +28,13 @@
                 position: relative
     &__logo
         position: relative
+        width: 28.7rem
+        height: 9rem  
         transform-style: preserve-3d
+        top: 5px
         &__in, &__out
+            object-fit: contain
             position: absolute
-            width: 100%
-            height: 100%
             backface-visibility: hidden
             transition: transform .5s
         &__in
@@ -88,7 +90,6 @@
             &:hover
                 z-index: 1
                 animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation 
-
         &__dots
             position: absolute
             top: 19%
@@ -106,7 +107,6 @@
     &-little
         width: 23.8rem
         object-fit: contain
-        
 
 .nav
     &__link 
